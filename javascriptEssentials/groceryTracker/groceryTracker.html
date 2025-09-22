@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Tracker</title>
+</head>
+<body>
+    <h1>Grocery Tracker Calculator</h1>
+
+    <label for="grocery1">Enter Grocery-1 Amount:</label>
+    <input type="number"  id="grocery1"><br>
+
+    <label for="grocery2">Enter Grocery-2 Amount:</label>
+    <input type="number"  id="grocery2"><br>
+
+    <label for="grocery3">Enter Grocery-3 Amount:</label>
+    <input type="number"  id="grocery3"><br>
+
+    <button onclick="calculateTotal()">Calculate Total Amount</button><br>
+
+    <p id="result"></p>
+    
+    <script>
+        //defining variables
+        let grocery1;
+        let grocery2;
+        let grocery3;
+
+        //defining function
+        function calculateTotal(){
+            //getting values
+            grocery1 = parseFloat(document.getElementById("grocery1").value);
+            grocery2 = parseFloat(document.getElementById("grocery2").value);
+            grocery3 = parseFloat(document.getElementById("grocery3").value);
+            //adding values
+            let result = grocery1 + grocery2 + grocery3
+            //displaying result
+            document.getElementById("result").innerText = `The total amount is : ${result}`
+        }
+    </script>
+</body>
+</html>
